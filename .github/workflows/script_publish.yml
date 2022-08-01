@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: copy html via ssh password
+    - name: copy scripts via ssh password
       uses: appleboy/scp-action@master
       with:
         host: ${{ secrets.HOST }}
