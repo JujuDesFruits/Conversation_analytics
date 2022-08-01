@@ -17,7 +17,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         source: "ansible/*"
-        target: "/home/github_bot/ansible"
+        target: "/home/github_bot"
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
