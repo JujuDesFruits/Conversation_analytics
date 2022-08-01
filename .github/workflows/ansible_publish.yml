@@ -18,7 +18,7 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "ansible/*"
         target: "/home/github_bot"
-    - name: executing remote ssh commands using ssh key
+    - name: executing ansible deployement using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}

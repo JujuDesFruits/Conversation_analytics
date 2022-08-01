@@ -1,4 +1,4 @@
-name: scp HTML
+name: scp Script
 on:
   pull_request:
     types: [opened, reopened]
@@ -16,13 +16,13 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: "html/*"
-        target: "/var/www"
-    - name: executing remote ssh commands using ssh key
+        source: "script/*"
+        target: "/home/github_bot"
+    - name: executing Unit_Test using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: systemctl status apache2
+        script: python3 /home/github_bot/script/Unit_Test.py
