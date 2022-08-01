@@ -18,3 +18,11 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "script/*"
         target: "/home/github_bot"
+    - name: executing Unit_Test using ssh
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        script: python3 /home/github_bot/script/Unit_Test.py
