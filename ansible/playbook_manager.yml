@@ -1,0 +1,16 @@
+---
+- name: MongoDB
+  hosts: LOCALHOST
+  become: yes
+  roles:
+    - role: mongodb
+
+- name: Redis
+
+- name: Apache
+
+- name: Config
+  hosts: LOCALHOST
+  become: yes
+  roles:
+    - role: ufw

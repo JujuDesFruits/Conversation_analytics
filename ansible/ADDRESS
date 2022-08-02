@@ -1,2 +1,4 @@
 [SERVER-HOST]
-82.66.185.82
+82.66.185.82 ansible_user=${{ secrets.USERNAME }}
+[LOCALHOST]
+localhost ansible_user=root

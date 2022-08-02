@@ -1,0 +1,4 @@
+- name : mongo_start
+  service:
+      name: mongod
+      state: started

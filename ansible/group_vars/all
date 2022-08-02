@@ -1,0 +1,4 @@
+---
+db_user: ${{ secrets.DB_USER }}
+db_name: Mongo-jtr
+db_password: ${{ secrets.DB_PASSWORD }}
