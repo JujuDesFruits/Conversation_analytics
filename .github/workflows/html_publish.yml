@@ -18,7 +18,7 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "html/*"
         target: "/var/www"
-    - name: executing remote ssh commands using ssh key
+    - name: check apach using ssh
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
